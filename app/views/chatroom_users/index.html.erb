@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Chatroom users</h1>
+
+<div id="chatroom_users">
+  <% @chatroom_users.each do |chatroom_user| %>
+    <%= render chatroom_user %>
+    <p>
+      <%= link_to "Show this chatroom user", chatroom_user %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New chatroom user", new_chatroom_user_path %>
