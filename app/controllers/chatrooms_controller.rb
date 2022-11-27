@@ -8,6 +8,7 @@ class ChatroomsController < ApplicationController
 
   # GET /chatrooms/1 or /chatrooms/1.json
   def show
+		shau uon
   end
 
   # GET /chatrooms/new
