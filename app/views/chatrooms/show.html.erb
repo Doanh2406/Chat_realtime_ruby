@@ -2,10 +2,12 @@
 
 <%= render @chatroom %>
 
-<div>
-  <%= link_to "Edit this chatroom", edit_chatroom_path(@chatroom) %> |
-  <%= link_to "Back to chatrooms", chatrooms_path %>
+<div data-behavios="messages">
+  <% 1.upto(30) do %>
+    <div><strong>Name:</strong>Hello</div>
+  <% end %>
+</div> 
 
-  <%= button_to "Destroy this chatroom", @chatroom, method: :delete %>
-</div>
-<p>toi laf ai trong e</p>
+<%= form_for [@chatroom, Message.new] do |f| %>
+  <% f.text_area :body, row: 1, class:'form-control', autofocus: true %>
+<% end %> 

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", media: 'all', "data-turbolink-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -52,6 +51,23 @@
         </div>
       </div>
     </nav>
-    <%= yield %>
-  </body>
+    <div class="fluid-container">
+      <div class="row">
+        <div class="col-md-2">
+        <% if user_signed_in? %>
+          <h5>Chatrooms</h5>
+          <ul>
+    
+          <% current_user.chatrooms.each do |chatroom| %>
+            <li><%= link_to chatroom.name, chatroom %> </li>
+          <% end %>
+          </ul>
+        <% end %>
+        </div>
+        <div class="col-md-10">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body> 
 </html>
