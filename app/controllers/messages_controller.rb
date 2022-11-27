@@ -11,6 +11,7 @@ class MessagesController < ApplicationController
     private
 
     def set_chatroom
+			@chas
 			@chatroom = Chatroom.find_by(params[:chatroom_id])
     end    
 
