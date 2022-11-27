@@ -8,7 +8,11 @@ class ChatroomsController < ApplicationController
 
   # GET /chatrooms/1 or /chatrooms/1.json
   def show
+<<<<<<< HEAD
 		@messages = @chatroom.messages.order(created_at: :asc).limit(50)
+=======
+		shau uon
+>>>>>>> main
   end
 
   # GET /chatrooms/new
