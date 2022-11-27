@@ -8,6 +8,8 @@
     <p>
       <%= link_to "Show this chatroom", chatroom %>
     </p>
+      <%= link_to "Join", chatroom_chatroom_users_path(chatroom),  data: { "turbo-method": :post } %>
+      <%= link_to "Leave", chatroom_chatroom_users_path(chatroom), method: :delete %>
   <% end %>
 </div>
 

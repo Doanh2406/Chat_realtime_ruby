@@ -1,10 +1,9 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @chatroom_user %>
+<%= render @chatroom %>
 
 <div>
-  <%= link_to "Edit this chatroom user", edit_chatroom_user_path(@chatroom_user) %> |
-  <%= link_to "Back to chatroom users", chatroom_users_path %>
+  <%= link_to "Edit this chatroom user", edit_chatroom_chatroom_users_path(@chatroom) %> |
+  <%= link_to "Back to chatroom users", chatrooms_path %>
 
-  <%= button_to "Destroy this chatroom user", @chatroom_user, method: :delete %>
+  <%= button_to "Destroy this chatroom user", @chatroom, method: :delete %>
 </div>
