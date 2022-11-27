@@ -3,9 +3,12 @@
 <%= render @chatroom %>
 
 <div data-behavios="messages">
-  <% 1.upto(30) do %>
-    <div><strong>Name:</strong>Hello</div>
-  <% end %>
+   <% @messages.each do |mess| %>
+    <div>
+    <strong><%= mess.user.username %></strong>
+    :<%= mess.body %>
+    </div>
+   <% end %>
 </div>
 
 <%= form_for [@chatroom, Message.new] do |f| %>

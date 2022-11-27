@@ -10,3 +10,11 @@ import "jquery_ujs"
 //= require bootstrap-sprockets
 //= require tree .
 
+$('#new_message').keypress(function(e) {
+    if(e && e.keyCode == 13){
+        console.log('guiwr tom nhan')
+        console.log($(this));
+        e.preventDefault()
+        $(this).submit()
+    }
+});
