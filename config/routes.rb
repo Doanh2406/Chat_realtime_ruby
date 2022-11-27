@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  # resources :chatroom_users
   devise_for :users
-  resources :chatrooms
+  resources :chatrooms do
+    resource :chatroom_users
+    resources :messages
+  end
   root to: "chatrooms#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
