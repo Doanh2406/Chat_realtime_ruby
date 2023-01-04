@@ -11,6 +11,10 @@
    <% end %>
 </div>
 
+<<<<<<< HEAD
 <%= form_for [@chatroom, Messageeeeee.new] do |f| %>
+=======
+<%= form_for [@chatroom, Message.new], remote: true do |f| %>
+>>>>>>> 7c28c78fead390eb41fa1dffa973dcb038470558
   <% f.text_area :body, row: 1, class:'form-control', autofocus: true %>
 <% end %> 
